@@ -16,7 +16,7 @@
 
 
 
-
+`
 ./clash -h
 Usage of ./clash:
   -d string
@@ -31,3 +31,4 @@ Usage of ./clash:
         override secret for RESTful API
   -t    test configuration and exit
   -v    show current version of clas
+`
