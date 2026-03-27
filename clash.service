@@ -1,0 +1,26 @@
+[Unit]
+Description=Clash Daemon, A rule-based proxy in Go
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+# 确保你的启动目录正确
+WorkingDirectory=/usr/local/clash
+# 执行命令，-d 指定配置目录为当前目录
+ExecStart=/usr/local/clash/clash -d /usr/local/clash
+# 如果由于权限问题无法启动，可以取消下面两行的注释，并改为你的实际用户名（比如 root 或 ubuntu）
+# User=root
+# Group=root
+
+# 文件描述符限制，防止连接过多时报错
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+
+# 1. 赋予 clash 执行权限 (如果还没给的话)
+# sudo chmod +x /usr/local/clash/clash
+# 2. 创建或编辑 service 文件（可以直接把刚才生成的文件内容贴进去）
+# sudo nano /etc/systemd/system/clash.service
