@@ -16,8 +16,8 @@
 
 
 
-`
-./clash -h
+
+```./clash -h
 Usage of ./clash:
   -d string
         set configuration directory 设置配置目录
@@ -30,5 +30,5 @@ Usage of ./clash:
   -secret string
         override secret for RESTful API
   -t    test configuration and exit
-  -v    show current version of clas
-`
+  -v    show current version of clash
+```
