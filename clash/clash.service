@@ -23,4 +23,17 @@ WantedBy=multi-user.target
 # 1. 赋予 clash 执行权限 (如果还没给的话)
 # sudo chmod +x /usr/local/clash/clash
 # 2. 创建或编辑 service 文件（可以直接把刚才生成的文件内容贴进去）
-# sudo nano /etc/systemd/system/clash.service
+# sudo vim /etc/systemd/system/clash.service
+# 3. 重载 systemd
+# sudo systemctl daemon-reload
+# 4. 启动 clash
+# sudo systemctl start clash
+# 5. 设置 clash 为开机启动
+# sudo systemctl enable clash
+# 6. 查看 clash 运行状态
+# sudo systemctl status clash
+# 7. 停止 clash
+# sudo systemctl stop clash
+# 8. 删除 clash
+# sudo systemctl disable clash
+# sudo rm /etc/systemd/system/clash.service
