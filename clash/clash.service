@@ -24,6 +24,7 @@ WantedBy=multi-user.target
 # sudo chmod +x /usr/local/clash/clash
 # 2. 创建或编辑 service 文件（可以直接把刚才生成的文件内容贴进去）
 # sudo vim /etc/systemd/system/clash.service
+# sudo cp clash.service /etc/systemd/system/clash.service
 # 3. 重载 systemd
 # sudo systemctl daemon-reload
 # 4. 启动 clash
